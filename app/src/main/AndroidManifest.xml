@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.pixelexperience.ota">
+    package="com.simplixone.ota">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -15,7 +15,7 @@
     <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
-        android:name=".UpdaterApplication"
+        android:name="com.simplixone.ota.UpdaterApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,7 +23,7 @@
         android:theme="@style/AppTheme"
         android:networkSecurityConfig="@xml/network_security_config">
         <activity
-            android:name=".activities.UpdaterActivity"
+            android:name="com.simplixone.ota.activities.UpdaterActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop">
             <intent-filter>
@@ -32,36 +32,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.AddonsActivity"
-            android:label="@string/addons_title"
-            android:launchMode="singleTop" />
-        <activity
-            android:name=".activities.LocalChangelogActivity"
+            android:name="com.simplixone.ota.activities.LocalChangelogActivity"
             android:label="@string/changelog_title"
             android:launchMode="singleTop"
-            android:parentActivityName=".activities.UpdaterActivity"
+            android:parentActivityName="com.simplixone.ota.activities.UpdaterActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
 
-        <service android:name=".service.UpdateCheckService"
+        <service android:name="com.simplixone.ota.service.UpdateCheckService"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:exported="true"/>
 
-        <service android:name=".service.DownloadService" />
-        <service android:name=".service.DownloadCompleteIntentService" />
+        <service android:name="com.simplixone.ota.service.DownloadService" />
+        <service android:name="com.simplixone.ota.service.DownloadCompleteIntentService" />
 
-        <receiver android:name=".receiver.BootReceiver">
+        <receiver android:name="com.simplixone.ota.receiver.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiver.DownloadReceiver">
+        <receiver android:name="com.simplixone.ota.receiver.DownloadReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
-                <action android:name="org.pixelexperience.ota.action.START_DOWNLOAD" />
+                <action android:name="com.simplixone.ota.action.START_DOWNLOAD" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.NotificationClickReceiver">
+        <receiver android:name="com.simplixone.ota.receiver.NotificationClickReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
             </intent-filter>

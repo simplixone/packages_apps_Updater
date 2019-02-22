@@ -13,59 +13,6 @@
         android:key="updates_category"
         android:title="@string/updates_category_title" />
 
-    <PreferenceCategory
-        android:key="extras_category"
-        android:title="@string/extras_category_title">
-
-        <Preference
-            android:icon="@drawable/ic_addons"
-            android:key="addons"
-            android:layout="@layout/preference_material_settings"
-            android:summary="@string/addons_summary"
-            android:title="@string/addons_title" />
-
-        <Preference
-            android:icon="@drawable/ic_web_icon"
-            android:key="website_info"
-            android:layout="@layout/preference_material_settings"
-            android:summary="@string/website_info_summary"
-            android:title="@string/website_info_title" />
-
-        <Preference
-            android:icon="@drawable/ic_news_icon"
-            android:key="news_info"
-            android:layout="@layout/preference_material_settings"
-            android:summary="@string/news_info_summary"
-            android:title="@string/news_info_title" />
-
-        <Preference
-            android:icon="@drawable/ic_donate_icon"
-            android:key="donate_info"
-            android:layout="@layout/preference_material_settings"
-            android:summary="@string/donate_info_summary"
-            android:title="@string/donate_info_title" />
-
-        <Preference
-            android:icon="@drawable/ic_forum_icon"
-            android:key="forum_info"
-            android:layout="@layout/preference_material_settings"
-            android:summary="@string/forum_info_summary"
-            android:title="@string/forum_info_title" />
-
-        <Preference
-            android:icon="@drawable/ic_maintainers_icon"
-            android:key="developer_info"
-            android:layout="@layout/preference_material_settings"
-            android:title="@string/developer_info_title" />
-
-        <Preference
-            android:icon="@drawable/ic_web_icon"
-            android:key="forum_info"
-            android:layout="@layout/preference_material_settings"
-            android:summary="@string/website_info_summary"
-            android:title="@string/website_info_title" />
-
-    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="settings_category"
